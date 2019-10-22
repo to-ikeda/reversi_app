@@ -31,7 +31,8 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData data)
     {
         //石を表示
-        piece.SetActive(true);
+        //piece.SetActive(true);
+        Instantiate(piece, transform.position, transform.rotation);
 
         if (gmScript.player == "black")
         {
