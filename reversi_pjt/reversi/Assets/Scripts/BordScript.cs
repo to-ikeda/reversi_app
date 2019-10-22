@@ -38,12 +38,10 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
         {
             //石を黒に変更
             piece.GetComponent<Renderer>().material = materials[0];
-            Debug.Log(gmScript.player);
         }
         else {
             //石を白に変更
             piece.GetComponent<Renderer>().material = materials[1];
-            Debug.Log(gmScript.player);
         }
 
     }
