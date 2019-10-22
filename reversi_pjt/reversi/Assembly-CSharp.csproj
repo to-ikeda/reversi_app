@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BordScript.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/program/reversi_app/reversi_pjt/reversi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
