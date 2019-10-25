@@ -5,68 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public string player = "black";
-
-
-    //ここをボードのスクリプトに組み込む
-    //static void Show(Reversi r)
-    //{
-
-    //    Debug.Log(" ");
-    //    for(int i = 0 ; i < Reversi.N ; i++ )
-    //        Debug.Log(i);
-    //    Debug.Log("---");
-
-    //    for(int i = 0 ; i < Reversi.N ; i++ )
-    //    {
-    //        Debug.Log(i);
-    //        for(int j = 0 ; j < Reversi.N ; j++ )
-    //        {
-    //            switch( r.Board[j,i] )
-    //            {
-    //                case Reversi.BLACK:
-    //                    Debug.Log("●");
-    //                    break;
-    //                case Reversi.WHITE:
-    //                    Debug.Log("○");
-    //                    break;
-    //                default:
-    //                    Debug.Log("　");
-    //                    break;
-    //            }
-    //        }
-    //        Debug.Log("---");
-    //    }
-    //}
-
     // Start is called before the first frame update
     void Start()
     {
-
-        //ここをボードのスクリプトに組み込む
-        ////// ゲーム用クラスを用意
-        ////var r = new Reversi();
-        ////int x, y;
-
-        ////while (r.CheckFinish() == false)
-        ////{
-        ////    Show(r);
-
-        ////    if (r.Turn)
-        ////    {
-        ////        // 人間からの入力
-        ////        Debug.Log("左からの番号を入力");
-        ////        if (int.TryParse(Debug.Log(), out x) == false) continue;
-        ////        Debug.Log("上からの番号を入力");
-        ////        if (int.TryParse(Console.ReadLine(), out y) == false) continue;
-        ////        r.PutStone(x, y);
-        ////    }
-        ////    else
-        ////    {
-        ////        // AIに打たせる
-        ////        r.AIPut();
-        ////    }
-        ////}
 
     }
 
@@ -75,8 +16,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-
 
 }
 

@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\BordCellFactoryScript.cs" />
      <Compile Include="Assets\Scripts\BordScript.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\OfflineButtonScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/program/reversi_app/reversi_pjt/reversi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
