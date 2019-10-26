@@ -81,10 +81,10 @@ class Reversi
     public void Init()
     {
         this.Board = new int[N, N];
-        this.Board[3, 3] = WHITE;
-        this.Board[4, 4] = WHITE;
-        this.Board[3, 4] = BLACK;
-        this.Board[4, 3] = BLACK;
+        this.Board[3, 3] = BLACK;
+        this.Board[4, 4] = BLACK;
+        this.Board[3, 4] = WHITE;
+        this.Board[4, 3] = WHITE;
         this.Turn = true;
 
         this.BoardHistory = new List<int[,]>();
