@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System;
 
 public class BordScript : MonoBehaviour, IPointerClickHandler
 {
@@ -16,14 +17,21 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
     // ボードの石の描画状態を保持する配列
     private static GameObject[,] pieceArray = new GameObject[8, 8];
 
+    //
+    private PutMarkManager putMarkManager;
+
     // Start is called before the first frame update
     void Start()
     {
 
         reversi = new Reversi();
 
+        GameObject putMarkManagerObject = GameObject.Find("PutMarkManagerObject");
+        putMarkManager = putMarkManagerObject.GetComponent<PutMarkManager>();
+
         // ゲーム開始時にreversi.Boardの状態を確認し、ボードの描画状態を更新する。
         ConfirmBord();
+        UpdatePutMark();
 
     }
 
@@ -53,6 +61,7 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
 
             // reversi.Boardの状態を確認し、ボードの描画状態を更新する。
             ConfirmBord();
+            UpdatePutMark();
         }
 
         //終了判定
@@ -75,9 +84,12 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
         int mateBLACK = 0;
         int mateWHITE = 1;
 
-        int[,] bord = reversi.Board;
+        int[,] bord = reversi.Board;     
 
         int z = 0;
+
+        putMarkManager.ResetPutMark();
+
         while (z < 8)
         {
             int x = 0;
@@ -92,6 +104,7 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
                 {
                     UpdatePieceArray(x, z, mateWHITE);
                 }
+
                 x++;
             }
             z++;
@@ -110,6 +123,22 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
         else
         {
             pieceArray[x, z].GetComponent<Renderer>().material = materials[material];
+        }
+    }
+
+    private void UpdatePutMark()
+    {
+
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                bool putFlg = reversi.CanPut(i, j);
+                if (putFlg)
+                {
+                    putMarkManager.ActivePutMark(i, j);
+                }
+            }
         }
     }
 }
