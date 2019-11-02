@@ -23,7 +23,8 @@ public class BordCellFactoryScript : MonoBehaviour
 
             while (x < BORD_SIDE_MAX)
             {
-                bordSell.name = "bordSell(" + x + "," + z + ")";
+                bordSell.name = "bordSell" + x + z ;
+                //Debug.Log(bordSell.name);
                 Instantiate(bordSell, new Vector3(1.0f * x, 0f, 1.0f * z), transform.rotation);
                 x++;
             }

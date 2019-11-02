@@ -10,6 +10,7 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
 
     public GameObject piece;
     public Material[] materials;
+    public Material[] materialsBoard;
 
     // ゲームマネージャー
     private static Reversi reversi;
@@ -17,21 +18,28 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
     // ボードの石の描画状態を保持する配列
     private static GameObject[,] pieceArray = new GameObject[8, 8];
 
-    //
-    private PutMarkManager putMarkManager;
-
     // Start is called before the first frame update
     void Start()
     {
 
         reversi = new Reversi();
 
-        GameObject putMarkManagerObject = GameObject.Find("PutMarkManagerObject");
-        putMarkManager = putMarkManagerObject.GetComponent<PutMarkManager>();
-
         // ゲーム開始時にreversi.Boardの状態を確認し、ボードの描画状態を更新する。
         ConfirmBord();
         UpdatePutMark();
+
+        Debug.Log(reversi.Turn);
+
+        //// typeで指定した型の全てのオブジェクトを配列で取得し,その要素数分繰り返す.
+        //foreach (GameObject obj in UnityEngine.Object.FindObjectsOfType(typeof(GameObject)))
+        //{
+        //    // シーン上に存在するオブジェクトならば処理.
+        //    if (obj.activeInHierarchy)
+        //    {
+        //        // GameObjectの名前を表示.
+        //        Debug.Log(obj.name);
+        //    }
+        //}
 
     }
 
@@ -88,8 +96,6 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
 
         int z = 0;
 
-        putMarkManager.ResetPutMark();
-
         while (z < 8)
         {
             int x = 0;
@@ -114,7 +120,6 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
     // 石の描画を更新するメソッド。
     private void UpdatePieceArray(int x, int z, int material)
     {
-        //Debug.Log("hoge3");
         if (pieceArray[x, z] is null)
         {
             pieceArray[x, z] = Instantiate(piece, new Vector3(x, 0.15f, z), transform.rotation);
@@ -136,7 +141,21 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
                 bool putFlg = reversi.CanPut(i, j);
                 if (putFlg)
                 {
-                    putMarkManager.ActivePutMark(i, j);
+                    if (reversi.Turn)
+                    {
+                        GameObject obj = GameObject.Find("bordSell" + i + j + "(Clone)");
+                        obj.GetComponent<Renderer>().material = materialsBoard[1];
+                    }
+                    else {
+                        GameObject obj = GameObject.Find("bordSell" + i + j + "(Clone)");
+                        obj.GetComponent<Renderer>().material = materialsBoard[2];
+                    }
+
+                }
+                else
+                {
+                    GameObject obj = GameObject.Find("bordSell" + i + j + "(Clone)");
+                    obj.GetComponent<Renderer>().material = materialsBoard[0];
                 }
             }
         }
