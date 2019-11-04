@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{497A75E8-1A22-F22B-F4D2-2A8A058E10DC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BordCellFactoryScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/BordScript.cs" Line="135" Column="51" />
-      <File FileName="Assets/Scripts/BordCellFactoryScript.cs" Line="26" Column="96" />
-      <File FileName="Assets/Scripts/OfflineButtonScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PutMarkManager.cs" Line="55" Column="27" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BordScript.cs" Line="12" Column="23" />
+      <File FileName="Assets/Scripts/BordCellFactoryScript.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/OfflineButtonScript.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +12,7 @@
           <Node name="reversi" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
+                <Node name="BordCellFactoryScript.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="706ca9c8-5bc6-48de-b37a-406b609644d9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="907abb41-8c85-44ab-aa13-0cd517581712" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
