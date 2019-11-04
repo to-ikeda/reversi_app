@@ -143,10 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bordSell: {fileID: 1963532603260257940, guid: ce4d6be5b7ad14d43a8c23518c6d1861,
     type: 3}
-  bordHeightLine: {fileID: 102490879205509308, guid: 67beed12f560e4738832978b07bdff96,
-    type: 3}
-  bordSideLine: {fileID: 3475770108199605275, guid: 45a0252eef4d443ba95c88918d5d8443,
-    type: 3}
+  bordLine: {fileID: 102490879205509308, guid: 67beed12f560e4738832978b07bdff96, type: 3}
   bordMark: {fileID: 7652391245362204356, guid: aa05b08e3d14b4facaafcc6a51aa5613,
     type: 3}
 --- !u!4 &58901895

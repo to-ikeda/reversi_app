@@ -5,8 +5,7 @@ using UnityEngine;
 public class BordCellFactoryScript : MonoBehaviour
 {
     [SerializeField] private GameObject bordSell;
-    [SerializeField] private LineRenderer bordHeightLine;
-    [SerializeField] private LineRenderer bordSideLine;
+    [SerializeField] private LineRenderer bordLine;
     [SerializeField] private GameObject bordMark;
 
     // ボードの縦横の大きさを定義
@@ -39,12 +38,12 @@ public class BordCellFactoryScript : MonoBehaviour
         for (int i = 0; i < BORD_LINE; i++)
         {
             // 縦線を作成
-            Instantiate(bordHeightLine, new Vector3(-0.5f + i, 0.1f, 7.5f), Quaternion.identity);
+            Instantiate(bordLine, new Vector3(-0.5f + i, 0.1f, 7.5f), Quaternion.identity);
 
             // 横線を作成
-            var sideLineObject = Instantiate(bordSideLine, new Vector3(-0.5f, 0.1f, -0.5f + i), Quaternion.identity);
+            var sideLineObject = Instantiate(bordLine, new Vector3(-0.5f, 0.1f, -0.5f + i), Quaternion.identity);
             // 横線を90度回転させる
-            sideLineObject.transform.Rotate(0.0f, 90.0f, 0.0f);
+            sideLineObject.transform.Rotate(0.0f, -90.0f, 0.0f);
         }
 
         // ボードの丸いマークを4つ作成。
