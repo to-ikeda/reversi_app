@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.UI;
 
 public class BordScript : MonoBehaviour, IPointerClickHandler
 {
@@ -27,6 +28,7 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
         // ゲーム開始時にreversi.Boardの状態を確認し、ボードの描画状態を更新する。
         ConfirmBord();
         UpdatePutMark();
+        UpdateScore();
 
         Debug.Log(reversi.Turn);
 
@@ -70,6 +72,7 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
             // reversi.Boardの状態を確認し、ボードの描画状態を更新する。
             ConfirmBord();
             UpdatePutMark();
+            UpdateScore();
         }
 
         //終了判定
@@ -159,5 +162,22 @@ public class BordScript : MonoBehaviour, IPointerClickHandler
                 }
             }
         }
+    }
+
+
+    // 画面のスコアを更新するメソッド
+    private void UpdateScore()
+    {
+        int scoreBlack = reversi.CountStone(Reversi.BLACK);
+        int scoreWhite = reversi.CountStone(Reversi.WHITE);
+
+        string scoreBlackText = String.Format("{0:00}", scoreBlack);
+        string scoreWhiteText = String.Format("{0:00}", scoreWhite);
+
+        GameObject scoreTextBlackObj = GameObject.Find("ScoreLabel_Black");
+        GameObject scoreTextWhiteObj = GameObject.Find("ScoreLabel_White");
+
+        scoreTextBlackObj.GetComponent<Text>().text = scoreBlackText;
+        scoreTextWhiteObj.GetComponent<Text>().text = scoreWhiteText;
     }
 }

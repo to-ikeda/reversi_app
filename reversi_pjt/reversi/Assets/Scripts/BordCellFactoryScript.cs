@@ -7,6 +7,7 @@ public class BordCellFactoryScript : MonoBehaviour
     [SerializeField] private GameObject bordSell;
     [SerializeField] private LineRenderer bordLine;
     [SerializeField] private GameObject bordMark;
+    [SerializeField] private GameObject bordOutSide;
 
     // ボードの縦横の大きさを定義
     private const int BORD_HEIGHT_MAX = 8;
@@ -51,6 +52,49 @@ public class BordCellFactoryScript : MonoBehaviour
         Instantiate(bordMark, new Vector3(5.5f, 0.1f, 1.5f), Quaternion.identity);
         Instantiate(bordMark, new Vector3(1.5f, 0.1f, 5.5f), Quaternion.identity);
         Instantiate(bordMark, new Vector3(5.5f, 0.1f, 5.5f), Quaternion.identity);
+
+        // ボードの外側を作成。
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(0.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(1.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(2.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(3.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(4.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(5.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(6.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(7.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, -1.0f), Quaternion.identity);
+
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 0.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 2.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 3.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 4.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 5.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 6.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 7.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(8.0f, 0.0f, 8.0f), Quaternion.identity);
+
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, -1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 0.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 1.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 2.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 3.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 4.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 5.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 6.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 7.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(-1.0f, 0.0f, 8.0f), Quaternion.identity);
+
+        Instantiate(bordOutSide, new Vector3(0.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(1.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(2.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(3.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(4.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(5.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(6.0f, 0.0f, 8.0f), Quaternion.identity);
+        Instantiate(bordOutSide, new Vector3(7.0f, 0.0f, 8.0f), Quaternion.identity);
     }
 
     // Update is called once per frame
